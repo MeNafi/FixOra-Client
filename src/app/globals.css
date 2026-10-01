@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm cream marketplace theme (matches design references) */
+    --background: 40 33% 98%;
+    --foreground: 220 25% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 12%;
+    /* Coral / warm orange primary */
+    --primary: 18 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 20% 94%;
+    --secondary-foreground: 220 25% 18%;
+    --muted: 40 20% 95%;
+    --muted-foreground: 220 10% 42%;
+    --accent: 18 70% 96%;
+    --accent-foreground: 18 85% 40%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 152 60% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --border: 40 15% 90%;
+    --input: 40 15% 90%;
+    --ring: 18 85% 55%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 40 20% 96%;
+    --card: 220 22% 12%;
+    --card-foreground: 40 20% 96%;
+    --popover: 220 22% 12%;
+    --popover-foreground: 40 20% 96%;
+    --primary: 18 90% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 18% 18%;
+    --secondary-foreground: 40 20% 96%;
+    --muted: 220 18% 16%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 18 40% 18%;
+    --accent-foreground: 18 90% 70%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 152 55% 42%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 90% 48%;
+    --warning-foreground: 0 0% 100%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 18 90% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-success {
+    background-color: hsl(var(--success));
+  }
+  .text-success {
+    color: hsl(var(--success));
+  }
+  .bg-success\/10 {
+    background-color: hsl(var(--success) / 0.1);
+  }
+  .text-success-foreground {
+    color: hsl(var(--success-foreground));
+  }
+}
