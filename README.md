@@ -31,11 +31,14 @@ FixOra enables customers to discover home services, connect with qualified techn
 
 > The frontend communicates with the **FixOra REST API** for authentication, marketplace data, booking management, payments, reviews, and administration.
 
-### 🌐 Live Demo
+#
 
-**Live Website:** `YOUR_LIVE_FRONTEND_URL`
-
-**Backend API:** `https://fixora-api-chi.vercel.app/api`
+> ### 🌐 Live Demo
+>
+> | Service | Deployment | Direct Link |
+> | :--- | :--- | :--- |
+> | 🚀 **Live Website** | [<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" height="28" />](https://fixora-virid-nu.vercel.app/) | [fixora-virid-nu.vercel.app](https://fixora-virid-nu.vercel.app/) |
+> | ⚡ **Backend API** | [<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" height="28" />](https://fixora-api-chi.vercel.app) | [fixora-api-chi.vercel.app](https://fixora-api-chi.vercel.app) |
 
 ---
 
