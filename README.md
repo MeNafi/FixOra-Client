@@ -1,12 +1,14 @@
 <div align="center">
 
-# FixOra Client 🔧
+<a href="https://fixora-client.vercel.app">
+    <img src="https://i.ibb.co.com/CxnFkxc/fixora-logo-no-bg-removebg-preview.png" alt="FixOra Logo" width="320" />
+  </a>
+  
+#
 
 ### Your Trusted Home Service Marketplace
 
-A modern, responsive, and production-ready **home service marketplace frontend** built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, **DaisyUI**, **shadcn/ui**, and **Framer Motion**.
-
-FixOra enables customers to discover home services, connect with qualified technicians, schedule services, manage bookings, complete secure Stripe payments, and submit reviews — while technicians and administrators manage their respective workflows through dedicated dashboards.
+FixOra enables customers to discover home services, connect with qualified technicians, schedule services, manage bookings, complete secure Stripe payments, and submit reviews while technicians and administrators manage their respective workflows through dedicated dashboards.
 
 <br />
 
