@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://fixora-client.vercel.app">
-    <img src="https://i.ibb.co.com/CxnFkxc/fixora-logo-no-bg-removebg-preview.png" alt="FixOra Logo" width="320" />
+    <img src="https://i.ibb.co.com/CxnFkxc/fixora-logo-no-bg-removebg-preview.png" alt="FixOra Logo" width="280" />
   </a>
   
 #
@@ -10,8 +10,6 @@
 
 FixOra enables customers to discover home services, connect with qualified technicians, schedule services, manage bookings, complete secure Stripe payments, and submit reviews while technicians and administrators manage their respective workflows through dedicated dashboards.
 
-<br />
-
 [![Next.js](https://img.shields.io/badge/Next.js-14-000000?style=for-the-badge\&logo=next.js\&logoColor=white)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge\&logo=typescript\&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?style=for-the-badge\&logo=tailwindcss\&logoColor=white)](https://tailwindcss.com/)
@@ -19,876 +17,234 @@ FixOra enables customers to discover home services, connect with qualified techn
 [![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-Radix-000000?style=for-the-badge)](https://ui.shadcn.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-Animation-0055FF?style=for-the-badge\&logo=framer\&logoColor=white)](https://www.framer.com/motion/)
 [![Stripe](https://img.shields.io/badge/Stripe-Checkout-635BFF?style=for-the-badge\&logo=stripe\&logoColor=white)](https://stripe.com/)
-
 </div>
 
 ---
 
-## 📖 Project Overview
+## 📌 Project Overview
 
-**FixOra** is a modern and responsive **Next.js home services marketplace** that connects customers with qualified service professionals.
+> FixOra is a full-featured home service marketplace that connects customers with trusted service professionals.
 
-Customers can browse available services, explore technician profiles, select available time slots, create bookings, make secure payments through Stripe, track booking progress, and leave reviews after completed services.
+> Customers can browse services, search for technicians, select available time slots, create bookings, make secure payments, track booking status, and submit reviews.
 
-Technicians can manage professional profiles, create services, configure availability, and handle incoming bookings.
+> Technicians can manage their profiles, services, availability, and bookings, while administrators can manage users, technicians, categories, bookings, payments, and platform statistics.
 
-Administrators can manage users, technicians, service categories, bookings, payments, and overall platform activity through a dedicated dashboard.
+> The frontend communicates with the **FixOra REST API** for authentication, marketplace data, booking management, payments, reviews, and administration.
 
-> 💡 **Architecture:** FixOra Client is a frontend application that consumes the FixOra REST API for authentication, services, bookings, payments, reviews, technician management, and administration.
-
-### 🌐 Live Website
-
-<p align="center">
-
-<a href="YOUR_LIVE_FRONTEND_URL">
-<img src="https://img.shields.io/badge/🚀%20Live%20Demo-FixOra-0ea5e9?style=for-the-badge" alt="Live Demo" />
-</a>
-
-</p>
+### 🌐 Live Demo
 
 **Live Website:** `YOUR_LIVE_FRONTEND_URL`
 
-### 🔗 Backend API
-
-**Live API:** `https://fixora-api-chi.vercel.app/api`
+**Backend API:** `https://fixora-api-chi.vercel.app/api`
 
 ---
 
-# ✨ Core Features
+## 🛠️ Tech Stack
 
-<table>
-<tr>
-
-<td align="center" width="20%">
-
-### 🌐
-
-**Marketplace**
-
-Browse services, categories, and qualified technicians.
-
-</td>
-
-<td align="center" width="20%">
-
-### 👤
-
-**Customer**
-
-Book services, manage bookings, payments, and reviews.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🛠️
-
-**Technician**
-
-Manage profile, services, availability, and jobs.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🛡️
-
-**Admin**
-
-Manage users, technicians, categories, and platform activity.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🔐
-
-**Authentication**
-
-JWT authentication with role-based access control.
-
-</td>
-
-</tr>
-</table>
+| Technology             | Purpose                                        |
+| :--------------------- | :--------------------------------------------- |
+| ⚡ **Next.js 14**       | App Router, routing, and frontend architecture |
+| 🔷 **TypeScript**      | Type-safe application development              |
+| 🎨 **Tailwind CSS**    | Responsive utility-first styling               |
+| 🌼 **DaisyUI**         | Reusable Tailwind UI components                |
+| 🧩 **shadcn/ui**       | Accessible and reusable UI primitives          |
+| ✨ **Framer Motion**    | Animations and smooth transitions              |
+| 📝 **React Hook Form** | Form management                                |
+| ✅ **Zod**              | Client-side schema validation                  |
+| 🗃️ **Zustand**        | Lightweight state management                   |
+| 🔌 **Axios**           | REST API communication                         |
+| 🔐 **JWT**             | Authentication and protected access            |
+| 💳 **Stripe Checkout** | Secure online payments                         |
+| 🍞 **Sonner**          | Toast notifications                            |
+| 🚀 **FixOra REST API** | Backend services and data                      |
 
 ---
 
-## 💳 Payment Integration
-
-<table>
-<tr>
-
-<td align="center" width="20%">
-
-### 💳
-
-**Stripe Checkout**
-
-Secure online payments through Stripe.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🔒
-
-**Secure**
-
-Secret keys remain server-side.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🔄
-
-**Payment Flow**
-
-Booking → Checkout → Payment.
-
-</td>
-
-<td align="center" width="20%">
-
-### ✅
-
-**Verification**
-
-Payment status verified by backend and Stripe.
-
-</td>
-
-<td align="center" width="20%">
-
-### ↩️
-
-**Redirect**
-
-Dedicated success and cancel pages.
-
-</td>
-
-</tr>
-</table>
-
-```text
-Customer creates booking
-        ↓
-Technician accepts
-        ↓
-Stripe Checkout
-        ↓
-Payment completed
-        ↓
-Backend verifies payment
-        ↓
-Customer returns to FixOra
-```
-
-> 🔒 Stripe secret keys are never exposed to the frontend.
-
----
-
-## 🔄 Booking Lifecycle
-
-<table>
-<tr>
-
-<td align="center" width="20%">
-
-### 📩
-
-**REQUESTED**
-
-Customer submits a booking request.
-
-</td>
-
-<td align="center" width="20%">
-
-### ✅
-
-**ACCEPTED**
-
-Technician accepts the request.
-
-</td>
-
-<td align="center" width="20%">
-
-### 💳
-
-**PAID**
-
-Customer completes Stripe payment.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🔧
-
-**IN PROGRESS**
-
-Technician starts the job.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🏁
-
-**COMPLETED**
-
-Job is finished and review is enabled.
-
-</td>
-
-</tr>
-</table>
-
-```text
-REQUESTED → ACCEPTED → PAID → IN_PROGRESS → COMPLETED
-     │
-     ├── DECLINED
-     │
-     └── CANCELLED
-```
-
-### Booking Status
-
-| Status        | Meaning             | Action            |
-| :------------ | :------------------ | :---------------- |
-| `REQUESTED`   | Booking submitted   | Accept / Decline  |
-| `ACCEPTED`    | Technician accepted | Customer can pay  |
-| `DECLINED`    | Request declined    | No further action |
-| `PAID`        | Payment completed   | Start job         |
-| `IN_PROGRESS` | Job active          | Complete job      |
-| `COMPLETED`   | Service completed   | Leave review      |
-| `CANCELLED`   | Booking cancelled   | No further action |
-
----
-
-## 🎨 UI/UX Architecture
-
-<table>
-<tr>
-
-<td align="center" width="20%">
-
-### 📱
-
-**Responsive**
-
-Optimized for mobile, tablet, and desktop.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🎨
-
-**Design System**
-
-Reusable and consistent UI components.
-
-</td>
-
-<td align="center" width="20%">
-
-### ⚡
-
-**Loading**
-
-Skeleton loaders and smooth loading states.
-
-</td>
-
-<td align="center" width="20%">
-
-### 💬
-
-**Feedback**
-
-Clear validation, errors, and success messages.
-
-</td>
-
-<td align="center" width="20%">
-
-### ✨
-
-**Animation**
-
-Smooth transitions and micro-interactions.
-
-</td>
-
-</tr>
-</table>
-
-### UI Technologies
-
-* **Tailwind CSS** — Utility-first styling
-* **DaisyUI** — Reusable Tailwind components
-* **shadcn/ui** — Accessible UI primitives
-* **Framer Motion** — Animations and transitions
-* **Sonner** — Toast notifications
-* **React Hook Form** — Form management
-* **Zod** — Client-side validation
-
----
-
-## 🔎 Search & Filtering
-
-<table>
-<tr>
-
-<td align="center" width="20%">
-
-### 🔎
-
-**Search**
-
-Search services and technicians.
-
-</td>
-
-<td align="center" width="20%">
-
-### 📂
-
-**Category**
-
-Filter by service category.
-
-</td>
-
-<td align="center" width="20%">
-
-### 📍
-
-**Location**
-
-Filter services by location.
-
-</td>
-
-<td align="center" width="20%">
-
-### 💰
-
-**Price**
-
-Filter by minimum and maximum price.
-
-</td>
-
-<td align="center" width="20%">
-
-### ⭐
-
-**Rating**
-
-Filter by minimum rating.
-
-</td>
-
-</tr>
-</table>
-
----
-
-## 📅 Availability & Scheduling
-
-<table>
-<tr>
-
-<td align="center" width="20%">
-
-### 📆
-
-**Working Days**
-
-Configure available working days.
-
-</td>
-
-<td align="center" width="20%">
-
-### ⏰
-
-**Time Slots**
-
-Configure working hours.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🔄
-
-**Update**
-
-Modify existing availability.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🚫
-
-**Unavailable**
-
-Prevent unavailable slot selection.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🎯
-
-**Booking Slots**
-
-Customers select available times.
-
-</td>
-
-</tr>
-</table>
+## ✨ Core Features
+
+| Feature                        | Description                                                   |
+| :----------------------------- | :------------------------------------------------------------ |
+| 🌐 **Service Marketplace**     | Discover and browse available home services                   |
+| 🛠️ **Technician Discovery**   | Explore technician profiles, skills, rates, and reviews       |
+| 🔎 **Search & Filtering**      | Search and filter services and technicians                    |
+| 📅 **Availability Scheduling** | View and manage technician working slots                      |
+| 📋 **Booking Management**      | Create, track, accept, decline, cancel, and complete bookings |
+| 💳 **Stripe Payments**         | Secure online payments through Stripe Checkout                |
+| ⭐ **Reviews & Ratings**        | Review technicians after completed services                   |
+| 🔐 **JWT Authentication**      | Secure login, registration, refresh token, and logout         |
+| 👥 **Role-Based Access**       | Customer, Technician, and Admin workflows                     |
+| 📊 **Dashboards**              | Dedicated dashboards for each user role                       |
+| 📱 **Responsive UI**           | Mobile, tablet, and desktop support                           |
+| ⚡ **Loading States**           | Skeleton loaders and loading feedback                         |
+| ⚠️ **Error Handling**          | Structured API errors and fallback UI                         |
+| ✨ **Animations**               | Smooth transitions and micro-interactions                     |
 
 ---
 
 ## 👥 Roles & Permissions
 
-<table>
-<tr>
-
-<td align="center" width="33%">
-
-### 👤 CUSTOMER
-
-Browse services, create bookings, make payments, manage bookings, and submit reviews.
-
-</td>
-
-<td align="center" width="33%">
-
-### 🛠️ TECHNICIAN
-
-Manage profile, services, availability, bookings, and job status.
-
-</td>
-
-<td align="center" width="33%">
-
-### 🛡️ ADMIN
-
-Manage users, technicians, categories, bookings, payments, and platform statistics.
-
-</td>
-
-</tr>
-</table>
+| Role               | Description                  | Main Capabilities                                                         |
+| :----------------- | :--------------------------- | :------------------------------------------------------------------------ |
+| 👤 **CUSTOMER**    | Users who book home services | Browse, book, pay, cancel, track, and review                              |
+| 🛠️ **TECHNICIAN** | Home service professionals   | Manage profile, services, availability, bookings, and jobs                |
+| 🛡️ **ADMIN**      | Platform administrators      | Manage users, technicians, categories, bookings, payments, and statistics |
 
 > **Role-based access:** Navigation, dashboards, actions, and protected routes adapt according to the authenticated user's role.
 
 ---
 
-# 🔐 Authentication & Authorization
+## 🔐 Authentication & Authorization
 
 FixOra uses **JWT-based authentication** integrated with the backend API.
 
-<table>
-<tr>
-
-<td align="center" width="20%">
-
-### 📝
-
-**Registration**
-
-Customer and technician registration.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🔑
-
-**Login**
-
-Secure credential-based authentication.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🔄
-
-**Refresh Token**
-
-Maintain authenticated sessions.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🛡️
-
-**Protected Routes**
-
-Restrict authenticated application areas.
-
-</td>
-
-<td align="center" width="20%">
-
-### 👥
-
-**RBAC**
-
-Role-based route and action protection.
-
-</td>
-
-</tr>
-</table>
+| Feature                      | Description                                  |
+| :--------------------------- | :------------------------------------------- |
+| 📝 **Registration**          | Customer and technician account registration |
+| 🔑 **Login**                 | Secure credential-based authentication       |
+| 🔄 **Refresh Token**         | Maintain authenticated sessions              |
+| 🚪 **Logout**                | Secure session termination                   |
+| 🛡️ **Protected Routes**     | Restrict authenticated application areas     |
+| 👥 **RBAC**                  | Role-based route and action protection       |
+| 🚫 **Unauthorized Handling** | Handle restricted resource access            |
+| 👤 **Profile**               | Manage authenticated user information        |
 
 ### Protected Areas
 
-```text
-Public
- ├── Home
- ├── Services
- ├── Categories
- ├── Technicians
- └── Authentication
-
-CUSTOMER
- ├── Dashboard
- ├── Bookings
- ├── Payments
- ├── Reviews
- └── Profile
-
-TECHNICIAN
- ├── Dashboard
- ├── Profile
- ├── Services
- ├── Availability
- └── Bookings
-
-ADMIN
- ├── Dashboard
- ├── Users
- ├── Technicians
- ├── Categories
- ├── Bookings
- └── Payments
-```
+| Area               | Routes                                                        |
+| :----------------- | :------------------------------------------------------------ |
+| 🌐 **Public**      | Home, Services, Categories, Technicians, Authentication       |
+| 👤 **Customer**    | Dashboard, Bookings, Payments, Reviews, Profile               |
+| 🛠️ **Technician** | Dashboard, Profile, Services, Availability, Bookings          |
+| 🛡️ **Admin**      | Dashboard, Users, Technicians, Categories, Bookings, Payments |
 
 ---
 
-# 🔌 API Integration
+## 💳 Payment Integration
 
-The frontend communicates with the FixOra REST API.
+FixOra uses **Stripe Checkout** for secure online payments.
 
-### Base URL
+| Feature                | Description                        |
+| :--------------------- | :--------------------------------- |
+| 💳 **Stripe Checkout** | Secure online payment processing   |
+| 🔒 **Secure Keys**     | Secret keys remain on the backend  |
+| 🔄 **Checkout Flow**   | Booking → Checkout → Payment       |
+| ✅ **Verification**     | Backend verifies payment status    |
+| ↩️ **Success Page**    | Redirect after successful payment  |
+| ❌ **Cancel Page**      | Redirect when payment is cancelled |
+| 🧾 **Payment History** | View previous payments             |
+| 🔍 **Payment Details** | View individual transactions       |
 
-```text
-https://fixora-api-chi.vercel.app/api
-```
-
-## Authentication
-
-| Method | Endpoint              | Access        |
-| :----- | :-------------------- | :------------ |
-| `POST` | `/auth/register`      | Public        |
-| `POST` | `/auth/login`         | Public        |
-| `POST` | `/auth/refresh-token` | Public        |
-| `POST` | `/auth/logout`        | Authenticated |
-| `GET`  | `/auth/me`            | Authenticated |
-
-## User Profile
-
-| Method | Endpoint    | Access        |
-| :----- | :---------- | :------------ |
-| `GET`  | `/users/me` | Authenticated |
-| `PUT`  | `/users/me` | Authenticated |
-
-## Public Services
-
-| Method | Endpoint                            | Access |
-| :----- | :---------------------------------- | :----- |
-| `GET`  | `/categories`                       | Public |
-| `GET`  | `/services`                         | Public |
-| `GET`  | `/services/:id`                     | Public |
-| `GET`  | `/technicians`                      | Public |
-| `GET`  | `/technicians/:id`                  | Public |
-| `GET`  | `/reviews/technician/:technicianId` | Public |
-
-## Bookings
-
-| Method  | Endpoint               | Access                     |
-| :------ | :--------------------- | :------------------------- |
-| `POST`  | `/bookings`            | Customer                   |
-| `GET`   | `/bookings`            | Customer / Technician      |
-| `GET`   | `/bookings/:id`        | Owner / Technician / Admin |
-| `PATCH` | `/bookings/:id/cancel` | Customer                   |
-
-## Payments
-
-| Method | Endpoint            | Access        |
-| :----- | :------------------ | :------------ |
-| `POST` | `/payments/create`  | Customer      |
-| `POST` | `/payments/confirm` | Authenticated |
-| `GET`  | `/payments`         | Authenticated |
-| `GET`  | `/payments/:id`     | Owner / Admin |
-
-## Technician
-
-| Method   | Endpoint                   | Access     |
-| :------- | :------------------------- | :--------- |
-| `PUT`    | `/technician/profile`      | Technician |
-| `GET`    | `/technician/availability` | Technician |
-| `PUT`    | `/technician/availability` | Technician |
-| `GET`    | `/technician/bookings`     | Technician |
-| `PATCH`  | `/technician/bookings/:id` | Technician |
-| `POST`   | `/services`                | Technician |
-| `GET`    | `/services/my-services`    | Technician |
-| `PATCH`  | `/services/:id`            | Technician |
-| `DELETE` | `/services/:id`            | Technician |
-
-## Reviews
-
-| Method | Endpoint              | Access   |
-| :----- | :-------------------- | :------- |
-| `POST` | `/reviews`            | Customer |
-| `GET`  | `/reviews/my-reviews` | Customer |
-
-## Admin
-
-| Method   | Endpoint                        | Access |
-| :------- | :------------------------------ | :----- |
-| `GET`    | `/admin/stats`                  | Admin  |
-| `GET`    | `/admin/users`                  | Admin  |
-| `GET`    | `/admin/users/:id`              | Admin  |
-| `PATCH`  | `/admin/users/:id`              | Admin  |
-| `PATCH`  | `/admin/technicians/:id/verify` | Admin  |
-| `GET`    | `/admin/bookings`               | Admin  |
-| `GET`    | `/admin/payments`               | Admin  |
-| `GET`    | `/admin/categories`             | Admin  |
-| `POST`   | `/admin/categories`             | Admin  |
-| `PATCH`  | `/admin/categories/:id`         | Admin  |
-| `DELETE` | `/admin/categories/:id`         | Admin  |
-
-> 📚 For detailed component-to-endpoint mapping, request flows, authentication handling, and API integration details, see **[API_INTEGRATION.md](./API_INTEGRATION.md)**.
-
----
-
-# 🗺️ Frontend Routes
-
-<table>
-<tr>
-
-<td align="center" width="20%">
-
-### 🌐 PUBLIC
-
-`/`
-`/services`
-`/services/[id]`
-`/categories`
-`/technicians`
-`/technicians/[id]`
-
-</td>
-
-<td align="center" width="20%">
-
-### 👤 CUSTOMER
-
-`/customer`
-`/customer/bookings`
-`/customer/bookings/[id]`
-`/customer/payments`
-
-</td>
-
-<td align="center" width="20%">
-
-### 🛠️ TECHNICIAN
-
-`/technician`
-`/technician/services`
-`/technician/availability`
-`/technician/bookings`
-
-</td>
-
-<td align="center" width="20%">
-
-### 🛡️ ADMIN
-
-`/admin`
-`/admin/users`
-`/admin/categories`
-`/admin/bookings`
-`/admin/payments`
-
-</td>
-
-<td align="center" width="20%">
-
-### 💳 PAYMENT
-
-`/payment/success`
-`/payment/cancel`
-
-</td>
-
-</tr>
-</table>
-
----
-
-# 🧭 User Journeys
-
-## 👤 Customer Journey
+### Payment Flow
 
 ```text
-Register / Login
-      ↓
-Browse Services
-      ↓
-Search & Filter
-      ↓
-View Technician
-      ↓
-Select Service
-      ↓
-Choose Available Time
-      ↓
-Submit Booking
-      ↓
-Technician Accepts
-      ↓
-Stripe Checkout
-      ↓
+Customer creates booking
+        ↓
+Technician accepts booking
+        ↓
+Customer clicks Pay Now
+        ↓
+Stripe Checkout Session
+        ↓
+Stripe Payment
+        ↓
+Backend Verification
+        ↓
 Payment Successful
-      ↓
-Track Booking
-      ↓
-Service Completed
-      ↓
-Leave Review
-```
-
-## 🛠️ Technician Journey
-
-```text
-Register / Login
-      ↓
-Setup Profile
-      ↓
-Create Services
-      ↓
-Configure Availability
-      ↓
-Receive Booking
-      ↓
-Accept / Decline
-      ↓
-Customer Payment
-      ↓
-Start Job
-      ↓
-Complete Job
-```
-
-## 🛡️ Admin Journey
-
-```text
-Admin Login
-      ↓
-Dashboard
-      ↓
-View Statistics
-      ↓
-Manage Users
-      ↓
-Verify Technicians
-      ↓
-Manage Categories
-      ↓
-Monitor Bookings
-      ↓
-Monitor Payments
+        ↓
+Customer returns to FixOra
 ```
 
 ---
 
-# ⚠️ Error Handling
+## 🔄 Booking Lifecycle
 
-FixOra provides structured and user-friendly error feedback throughout the application.
+| Status             | Meaning                     | Available Action                |
+| :----------------- | :-------------------------- | :------------------------------ |
+| 📩 **REQUESTED**   | Customer submitted booking  | Technician can Accept / Decline |
+| ✅ **ACCEPTED**     | Technician accepted booking | Customer can Pay                |
+| ❌ **DECLINED**     | Technician declined booking | No further action               |
+| 💳 **PAID**        | Payment completed           | Technician can Start            |
+| 🔧 **IN_PROGRESS** | Job is currently active     | Technician can Complete         |
+| 🏁 **COMPLETED**   | Service completed           | Customer can Review             |
+| 🚫 **CANCELLED**   | Booking cancelled           | No further action               |
 
-<table>
-<tr>
+**Main Flow:**
 
-<td align="center" width="20%">
+`REQUESTED → ACCEPTED → PAID → IN_PROGRESS → COMPLETED → REVIEW`
 
-### 🚨
+---
 
-**API Errors**
+## 🎨 UI/UX Architecture
 
-Readable backend error messages.
+| Principle                  | Description                               |
+| :------------------------- | :---------------------------------------- |
+| 📱 **Responsive Design**   | Mobile, tablet, and desktop support       |
+| 🎨 **Design System**       | Consistent reusable UI components         |
+| ♿ **Accessibility**        | Accessible interactive components         |
+| ⚡ **Loading States**       | Skeleton loaders and loading feedback     |
+| 📭 **Empty States**        | Helpful empty-state experiences           |
+| 💬 **User Feedback**       | Clear success and error messages          |
+| 🍞 **Toast Notifications** | Instant feedback with Sonner              |
+| 📝 **Form Validation**     | Client-side validation with Zod           |
+| ⚠️ **Error Boundaries**    | Route-level fallback experiences          |
+| ✨ **Animations**           | Smooth transitions and micro-interactions |
+| 📱 **Mobile UX**           | Touch-friendly responsive interfaces      |
 
-</td>
+---
 
-<td align="center" width="20%">
+## 🔎 Search & Filtering
 
-### 📝
+| Filter             | Description                         |
+| :----------------- | :---------------------------------- |
+| 🔎 **Search Term** | Search services and technicians     |
+| 📂 **Category**    | Filter by service category          |
+| 📍 **Location**    | Filter by service location          |
+| 💰 **Price Range** | Filter by minimum and maximum price |
+| ⭐ **Rating**       | Filter by minimum rating            |
+| ↕️ **Sorting**     | Sort marketplace results            |
+| 📄 **Pagination**  | Navigate large result sets          |
 
-**Validation**
+---
 
-Inline form validation feedback.
+## 📅 Availability & Scheduling
 
-</td>
+| Feature                    | Description                        |
+| :------------------------- | :--------------------------------- |
+| 📆 **Working Days**        | Select available working days      |
+| ⏰ **Time Slots**           | Configure available service hours  |
+| 🔄 **Update Availability** | Modify existing schedules          |
+| 🚫 **Unavailable Slots**   | Prevent unavailable selections     |
+| 👀 **Availability View**   | Customers can view available slots |
+| 🎯 **Slot Selection**      | Select a suitable service time     |
 
-<td align="center" width="20%">
+---
 
-### 🔐
+## ⭐ Reviews & Ratings
 
-**Authorization**
+| Feature                  | Description                           |
+| :----------------------- | :------------------------------------ |
+| ⭐ **Technician Reviews** | View technician reviews               |
+| 📝 **Submit Review**     | Review completed services             |
+| 📊 **Ratings**           | Display technician ratings            |
+| 👤 **My Reviews**        | View submitted reviews                |
+| 🔒 **Protected Reviews** | Review actions require authentication |
 
-Protected route and permission handling.
+---
 
-</td>
+## ⚠️ Error Handling
 
-<td align="center" width="20%">
-
-### 🌐
-
-**Network**
-
-Graceful network failure handling.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🍞
-
-**Toast**
-
-Success and error notifications.
-
-</td>
-
-</tr>
-</table>
+| Error Type                   | UI Response                     |
+| :--------------------------- | :------------------------------ |
+| 🚨 **API Errors**            | User-friendly server messages   |
+| 📝 **Validation Errors**     | Inline field-level feedback     |
+| 🔐 **Authentication Errors** | Login and session feedback      |
+| 🚫 **Authorization Errors**  | Protected resource handling     |
+| 🌐 **Network Errors**        | Connection failure feedback     |
+| 💳 **Payment Errors**        | Payment-specific messages       |
+| 📭 **Empty States**          | Helpful empty content           |
+| 💀 **Loading States**        | Skeleton and loading indicators |
+| 🍞 **Toast Feedback**        | Success and error notifications |
+| 🧱 **Error Boundaries**      | Route-level fallback UI         |
 
 ### Structured API Error
 
@@ -905,217 +261,218 @@ Success and error notifications.
 }
 ```
 
-The frontend transforms backend responses into clear and actionable UI feedback instead of exposing raw server errors.
+---
+
+## 🔌 API Integration
+
+**Base URL:**
+
+`https://fixora-api-chi.vercel.app/api`
+
+### Authentication
+
+| Method | Endpoint              | Access        |
+| :----- | :-------------------- | :------------ |
+| POST   | `/auth/register`      | Public        |
+| POST   | `/auth/login`         | Public        |
+| POST   | `/auth/refresh-token` | Public        |
+| POST   | `/auth/logout`        | Authenticated |
+| GET    | `/auth/me`            | Authenticated |
+
+### Marketplace
+
+| Method | Endpoint                            | Access |
+| :----- | :---------------------------------- | :----- |
+| GET    | `/categories`                       | Public |
+| GET    | `/services`                         | Public |
+| GET    | `/services/:id`                     | Public |
+| GET    | `/technicians`                      | Public |
+| GET    | `/technicians/:id`                  | Public |
+| GET    | `/reviews/technician/:technicianId` | Public |
+
+### Bookings & Payments
+
+| Method | Endpoint               | Access                     |
+| :----- | :--------------------- | :------------------------- |
+| POST   | `/bookings`            | Customer                   |
+| GET    | `/bookings`            | Customer / Technician      |
+| GET    | `/bookings/:id`        | Owner / Technician / Admin |
+| PATCH  | `/bookings/:id/cancel` | Customer                   |
+| POST   | `/payments/create`     | Customer                   |
+| POST   | `/payments/confirm`    | Authenticated              |
+| GET    | `/payments`            | Authenticated              |
+| GET    | `/payments/:id`        | Owner / Admin              |
+
+### Technician
+
+| Method | Endpoint                   | Access     |
+| :----- | :------------------------- | :--------- |
+| PUT    | `/technician/profile`      | Technician |
+| GET    | `/technician/availability` | Technician |
+| PUT    | `/technician/availability` | Technician |
+| GET    | `/technician/bookings`     | Technician |
+| PATCH  | `/technician/bookings/:id` | Technician |
+| POST   | `/services`                | Technician |
+| GET    | `/services/my-services`    | Technician |
+| PATCH  | `/services/:id`            | Technician |
+| DELETE | `/services/:id`            | Technician |
+
+### Reviews
+
+| Method | Endpoint              | Access   |
+| :----- | :-------------------- | :------- |
+| POST   | `/reviews`            | Customer |
+| GET    | `/reviews/my-reviews` | Customer |
+
+### Admin
+
+| Method | Endpoint                        | Access |
+| :----- | :------------------------------ | :----- |
+| GET    | `/admin/stats`                  | Admin  |
+| GET    | `/admin/users`                  | Admin  |
+| GET    | `/admin/users/:id`              | Admin  |
+| PATCH  | `/admin/users/:id`              | Admin  |
+| PATCH  | `/admin/technicians/:id/verify` | Admin  |
+| GET    | `/admin/bookings`               | Admin  |
+| GET    | `/admin/payments`               | Admin  |
+| GET    | `/admin/categories`             | Admin  |
+| POST   | `/admin/categories`             | Admin  |
+| PATCH  | `/admin/categories/:id`         | Admin  |
+| DELETE | `/admin/categories/:id`         | Admin  |
 
 ---
 
-# 🧱 Project Structure
+## 🗂️ Sample Project Folder Structure
 
 ```text
-src/
-├── app/
-│   ├── (auth)/
-│   │   ├── login/
-│   │   └── register/
-│   │
-│   ├── admin/
-│   │   ├── users/
-│   │   ├── categories/
-│   │   ├── bookings/
-│   │   └── payments/
-│   │
-│   ├── customer/
-│   │   ├── bookings/
-│   │   ├── payments/
-│   │   └── ...
-│   │
-│   ├── technician/
-│   │   ├── services/
-│   │   ├── availability/
-│   │   ├── bookings/
-│   │   └── ...
-│   │
-│   ├── services/
-│   ├── technicians/
-│   ├── categories/
-│   ├── payment/
-│   ├── profile/
-│   └── ...
-│
-├── components/
-│   ├── ui/
-│   ├── layout/
-│   └── shared/
-│
-├── lib/
-│   ├── api/
-│   │   ├── auth/
-│   │   ├── users/
+FixOra-Client/
+├── src/
+│   ├── app/
+│   │   ├── (auth)/
+│   │   ├── customer/
+│   │   ├── technician/
+│   │   ├── admin/
 │   │   ├── services/
 │   │   ├── technicians/
-│   │   ├── bookings/
-│   │   ├── payments/
-│   │   ├── reviews/
-│   │   └── admin/
+│   │   ├── categories/
+│   │   └── payment/
 │   │
-│   ├── auth/
-│   └── utils.ts
+│   ├── components/
+│   │   ├── ui/
+│   │   ├── layout/
+│   │   └── shared/
+│   │
+│   ├── lib/
+│   │   ├── api/
+│   │   ├── auth/
+│   │   └── utils.ts
+│   │
+│   ├── providers/
+│   ├── types/
+│   └── middleware.ts
 │
-├── providers/
-├── types/
-└── middleware.ts
+├── public/
+├── API_INTEGRATION.md
+├── .env.example
+├── package.json
+├── tailwind.config.ts
+└── tsconfig.json
 ```
+
+> This is a **sample folder structure** showing the main application organization.
 
 ---
 
-# 🛠️ Tech Stack
+## 🧭 Application Routes
 
-<table>
-<tr>
-
-<td align="center" width="20%">
-
-### ▲
-
-**Next.js 14**
-
-App Router and routing.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🔷
-
-**TypeScript**
-
-Type-safe development.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🎨
-
-**Tailwind CSS**
-
-Responsive utility-first styling.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🌸
-
-**DaisyUI**
-
-Reusable Tailwind components.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🧩
-
-**shadcn/ui**
-
-Accessible UI primitives.
-
-</td>
-
-</tr>
-</table>
-
-<table>
-<tr>
-
-<td align="center" width="20%">
-
-### 🎬
-
-**Framer Motion**
-
-Animations and transitions.
-
-</td>
-
-<td align="center" width="20%">
-
-### 📝
-
-**React Hook Form**
-
-Form management.
-
-</td>
-
-<td align="center" width="20%">
-
-### ✅
-
-**Zod**
-
-Schema validation.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🗃️
-
-**Zustand**
-
-Client-side state management.
-
-</td>
-
-<td align="center" width="20%">
-
-### ⚡
-
-**Axios**
-
-REST API communication.
-
-</td>
-
-</tr>
-</table>
+| Area                  | Main Routes                                                                               |
+| :-------------------- | :---------------------------------------------------------------------------------------- |
+| 🌐 **Public**         | `/`, `/services`, `/categories`, `/technicians`                                           |
+| 🔐 **Authentication** | `/login`, `/register`                                                                     |
+| 👤 **Customer**       | `/customer`, `/customer/bookings`, `/customer/payments`                                   |
+| 🛠️ **Technician**    | `/technician`, `/technician/services`, `/technician/availability`, `/technician/bookings` |
+| 🛡️ **Admin**         | `/admin`, `/admin/users`, `/admin/categories`, `/admin/bookings`, `/admin/payments`       |
+| 💳 **Payment**        | `/payment/success`, `/payment/cancel`                                                     |
+| 👤 **Profile**        | `/profile`                                                                                |
 
 ---
 
-# 🚀 Getting Started
+## 👤 Customer Journey
 
-## Prerequisites
+| Step   | Action                  |
+| :----- | :---------------------- |
+| 1️⃣    | Register / Login        |
+| 2️⃣    | Browse services         |
+| 3️⃣    | Search and filter       |
+| 4️⃣    | Explore technician      |
+| 5️⃣    | Select service and time |
+| 6️⃣    | Submit booking          |
+| 7️⃣    | Wait for technician     |
+| 8️⃣    | Technician accepts      |
+| 9️⃣    | Complete Stripe payment |
+| 🔟     | Track booking           |
+| 1️⃣1️⃣ | Service completed       |
+| 1️⃣2️⃣ | Submit review           |
 
-Make sure you have installed:
+---
 
-* Node.js 18+
-* npm
-* Git
+## 🛠️ Technician Journey
 
-## 1. Clone the Repository
+`Register → Login → Profile → Services → Availability → Receive Booking → Accept / Decline → Customer Payment → Start Job → Complete Job`
 
-```bash
-git clone https://github.com/MeNafi/FixOra-Client.git
-cd FixOra-Client
-```
+---
 
-## 2. Install Dependencies
+## 🛡️ Admin Journey
 
-```bash
-npm install
-```
+`Login → Dashboard → Statistics → Users → Technician Verification → Categories → Bookings → Payments`
 
-## 3. Configure Environment Variables
+---
 
-Create a local environment file:
+## ✨ Added Features
 
-```bash
-cp .env.example .env.local
-```
+| Feature                    | Description                                           |
+| :------------------------- | :---------------------------------------------------- |
+| 🌙 **Modern UI**           | Clean and professional marketplace interface          |
+| 📱 **Fully Responsive**    | Optimized for mobile, tablet, and desktop             |
+| 🎨 **DaisyUI Components**  | Reusable Tailwind-based components                    |
+| 🧩 **shadcn/ui**           | Accessible reusable UI primitives                     |
+| ✨ **Motion Effects**       | Smooth page transitions and interactions              |
+| 🔎 **Advanced Filtering**  | Search, category, location, price, and rating filters |
+| 📅 **Smart Scheduling**    | Technician availability and time-slot selection       |
+| 💳 **Real Stripe Payment** | Production-style online payment flow                  |
+| 🔐 **JWT + RBAC**          | Secure role-based application access                  |
+| 📊 **Role Dashboards**     | Customer, Technician, and Admin dashboards            |
+| 🍞 **Toast Notifications** | Real-time user feedback                               |
+| 📝 **Form Validation**     | React Hook Form + Zod validation                      |
+| ⚠️ **Error Boundaries**    | Graceful route-level error handling                   |
+| 💀 **Skeleton Loading**    | Better loading experiences                            |
+| 📭 **Empty States**        | Helpful feedback when data is unavailable             |
+| 📖 **API Documentation**   | Frontend-to-backend endpoint mapping                  |
 
-Configure:
+---
+
+## 🚀 Why This Project
+
+This project demonstrates modern frontend development practices and provides a scalable foundation for a real-world service marketplace.
+
+| Benefit                       | Description                                        |
+| :---------------------------- | :------------------------------------------------- |
+| 🧱 **Component Architecture** | Reusable and maintainable UI components            |
+| 🔒 **Secure Authentication**  | JWT authentication and protected routes            |
+| 👥 **Role-Based Access**      | Separate customer, technician, and admin workflows |
+| ⚡ **Type Safety**             | Reduces frontend bugs with TypeScript              |
+| 🔌 **API Integration**        | Centralized communication with REST APIs           |
+| 💳 **Real Payments**          | Stripe Checkout integration                        |
+| 📅 **Booking System**         | Complete service booking lifecycle                 |
+| 🎨 **Modern UI/UX**           | Responsive design with animations                  |
+| 📦 **Modular Structure**      | Organized feature-based architecture               |
+| 🚀 **Scalable Design**        | Suitable for real-world marketplace applications   |
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env.local` file:
 
 ```env
 NEXT_PUBLIC_API_URL=https://fixora-api-chi.vercel.app/api
@@ -1123,9 +480,43 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
 ```
 
-> 🔒 Never commit `.env` or `.env.local` to GitHub.
+| Variable                             | Required | Purpose                   |
+| :----------------------------------- | :------- | :------------------------ |
+| `NEXT_PUBLIC_API_URL`                | ✅        | Backend API URL           |
+| `NEXT_PUBLIC_APP_URL`                | ✅        | Frontend application URL  |
+| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | ⚪        | Stripe client integration |
 
-## 4. Start Development Server
+> Never expose `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `DATABASE_URL`, or `JWT_SECRET` in the frontend.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+| Requirement | Version            |
+| :---------- | :----------------- |
+| Node.js     | 18+                |
+| npm         | Latest recommended |
+| Git         | Latest recommended |
+
+### Installation
+
+```bash
+git clone https://github.com/MeNafi/FixOra-Client.git
+
+cd FixOra-Client
+
+npm install
+```
+
+Create your environment file:
+
+```bash
+cp .env.example .env.local
+```
+
+Start the development server:
 
 ```bash
 npm run dev
@@ -1139,441 +530,93 @@ http://localhost:3000
 
 ---
 
-# 🔑 Demo Credentials
+## 🧪 Demo Credentials
 
-## 🛡️ Admin
+| Role               | Email                     | Password     |
+| :----------------- | :------------------------ | :----------- |
+| 🛡️ **Admin**      | `admin@fixitnow.com`      | `Admin@1234` |
+| 🛠️ **Technician** | `karim.tech@fixitnow.com` | `Tech@1234`  |
+| 👤 **Customer**    | Register a new account    | —            |
 
-```text
-Email:    admin@fixitnow.com
-Password: Admin@1234
-```
-
-## 🛠️ Technician
-
-```text
-Email:    karim.tech@fixitnow.com
-Password: Tech@1234
-```
-
-## 👤 Customer
-
-Create a customer account through the registration page.
-
-> **Note:** Demo credentials depend on the backend seed configuration. If the backend credentials have been changed, use the updated credentials.
+> Demo credentials depend on the backend seed configuration.
 
 ---
 
-# 📦 Environment Variables
+## 📜 Available Scripts
 
-| Variable                             | Description              | Required |
-| :----------------------------------- | :----------------------- | :------: |
-| `NEXT_PUBLIC_API_URL`                | FixOra backend API URL   |     ✅    |
-| `NEXT_PUBLIC_APP_URL`                | Frontend application URL |     ✅    |
-| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Stripe publishable key   | Optional |
-
-### 🔒 Security
-
-Never expose these frontend-side:
-
-```text
-STRIPE_SECRET_KEY
-STRIPE_WEBHOOK_SECRET
-DATABASE_URL
-JWT_SECRET
-```
-
-Only publishable client-side variables should use the `NEXT_PUBLIC_` prefix.
+| Command         | Purpose                      |
+| :-------------- | :--------------------------- |
+| `npm run dev`   | Start development server     |
+| `npm run build` | Build production application |
+| `npm run start` | Start production server      |
+| `npm run lint`  | Run ESLint                   |
 
 ---
 
-# 📜 Available Scripts
+## 📖 Documentation
 
-### Development
+| Document                  | Description                                    |
+| :------------------------ | :--------------------------------------------- |
+| 📄 **API_INTEGRATION.md** | Frontend component-to-backend endpoint mapping |
+| 🔌 **FixOra API**         | Backend REST API                               |
+| 📦 **Postman Collection** | API testing and endpoint documentation         |
 
-```bash
-npm run dev
-```
-
-Starts the development server.
-
-### Production Build
-
-```bash
-npm run build
-```
-
-Creates a production build.
-
-### Production Server
-
-```bash
-npm run start
-```
-
-Starts the production server.
-
-### Lint
-
-```bash
-npm run lint
-```
-
-Runs ESLint checks.
+**Backend Repository:**
+`https://github.com/MeNafi/FixOra-API`
 
 ---
 
-# 📚 Documentation
+## 🔗 Related Project
 
-## API Integration
-
-Detailed frontend-to-backend integration documentation:
-
-**[API_INTEGRATION.md](./API_INTEGRATION.md)**
-
-Includes:
-
-* Endpoint mapping
-* Authentication flows
-* Role-based access
-* Request and response handling
-* Booking flow
-* Payment flow
-* Error handling
-* Frontend component integration
-
-## Backend API
-
-**Live API:**
-
-```text
-https://fixora-api-chi.vercel.app/api
-```
-
-## Backend Repository
-
-**FixOra API:**
-
-```text
-https://github.com/MeNafi/FixOra-API
-```
+| Backend Feature           | Included |
+| :------------------------ | :------- |
+| 🔌 REST API               | ✅        |
+| 🔐 JWT Authentication     | ✅        |
+| 👥 RBAC                   | ✅        |
+| 🗄️ PostgreSQL            | ✅        |
+| 🧩 Prisma ORM             | ✅        |
+| 💳 Stripe                 | ✅        |
+| 📋 Booking Management     | ✅        |
+| 🛠️ Technician Management | ✅        |
+| ⭐ Review Management       | ✅        |
+| 🛡️ Admin Management      | ✅        |
+| 📖 API Documentation      | ✅        |
 
 ---
 
-# 🔗 Related Project
+## 🚀 Production Considerations
 
-## FixOra API
-
-The backend powering the FixOra marketplace provides:
-
-<table>
-<tr>
-
-<td align="center" width="20%">
-
-### 🔌
-
-**REST API**
-
-</td>
-
-<td align="center" width="20%">
-
-### 🔐
-
-**JWT Auth**
-
-</td>
-
-<td align="center" width="20%">
-
-### 👥
-
-**RBAC**
-
-</td>
-
-<td align="center" width="20%">
-
-### 🗃️
-
-**PostgreSQL**
-
-</td>
-
-<td align="center" width="20%">
-
-### 💳
-
-**Stripe**
-
-</td>
-
-</tr>
-</table>
-
-Additional backend functionality includes booking management, technician management, review management, admin management, and API documentation.
+| Area                        | Implementation                       |
+| :-------------------------- | :----------------------------------- |
+| 🧱 **Reusable Components**  | Modular UI and API components        |
+| 🔷 **Type Safety**          | TypeScript across the application    |
+| 🔌 **Centralized API**      | Organized API service layer          |
+| 🔐 **Protected Routes**     | JWT-based route protection           |
+| 👥 **RBAC**                 | Role-based access control            |
+| ⚠️ **Error Handling**       | Structured API and UI error handling |
+| 📱 **Responsive Design**    | Mobile-first responsive interface    |
+| 🔒 **Secure Configuration** | Environment-based configuration      |
+| 💳 **Secure Payments**      | Stripe Checkout                      |
+| 📝 **Validation**           | Client-side form validation          |
 
 ---
 
-# 🎯 Assignment Requirements Covered
+## 📄 License
 
-<table>
-<tr>
+This project is a private project developed for the FixOra home service marketplace.
 
-<td align="center" width="20%">
-
-### ▲
-
-**Next.js**
-
-✅ App Router
-
-</td>
-
-<td align="center" width="20%">
-
-### 🔷
-
-**TypeScript**
-
-✅ Implemented
-
-</td>
-
-<td align="center" width="20%">
-
-### 📱
-
-**Responsive UI**
-
-✅ Implemented
-
-</td>
-
-<td align="center" width="20%">
-
-### 🎨
-
-**Tailwind**
-
-✅ Implemented
-
-</td>
-
-<td align="center" width="20%">
-
-### 🌸
-
-**DaisyUI**
-
-✅ Implemented
-
-</td>
-
-</tr>
-</table>
-
-<table>
-<tr>
-
-<td align="center" width="20%">
-
-### 🔐
-
-**JWT Auth**
-
-✅ Implemented
-
-</td>
-
-<td align="center" width="20%">
-
-### 🛡️
-
-**Protected Routes**
-
-✅ Implemented
-
-</td>
-
-<td align="center" width="20%">
-
-### 👥
-
-**RBAC**
-
-✅ Implemented
-
-</td>
-
-<td align="center" width="20%">
-
-### 📅
-
-**Bookings**
-
-✅ Implemented
-
-</td>
-
-<td align="center" width="20%">
-
-### 💳
-
-**Stripe**
-
-✅ Implemented
-
-</td>
-
-</tr>
-</table>
-
-<table>
-<tr>
-
-<td align="center" width="20%">
-
-### ⭐
-
-**Reviews**
-
-✅ Implemented
-
-</td>
-
-<td align="center" width="20%">
-
-### 🔎
-
-**Search**
-
-✅ Implemented
-
-</td>
-
-<td align="center" width="20%">
-
-### 📊
-
-**Dashboards**
-
-✅ Implemented
-
-</td>
-
-<td align="center" width="20%">
-
-### ⚠️
-
-**Error Handling**
-
-✅ Implemented
-
-</td>
-
-<td align="center" width="20%">
-
-### 📚
-
-**API Docs**
-
-✅ Implemented
-
-</td>
-
-</tr>
-</table>
-
----
-
-# 🏗️ Production Considerations
-
-FixOra follows production-oriented frontend practices including:
-
-<table>
-<tr>
-
-<td align="center" width="20%">
-
-### 🧩
-
-**Reusable**
-
-Reusable UI and API modules.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🔷
-
-**Type Safe**
-
-Type-safe API communication.
-
-</td>
-
-<td align="center" width="20%">
-
-### 🛡️
-
-**Secure**
-
-Protected routes and role-based access.
-
-</td>
-
-<td align="center" width="20%">
-
-### ⚠️
-
-**Reliable**
-
-Structured errors and fallback states.
-
-</td>
-
-<td align="center" width="20%">
-
-### 📱
-
-**Responsive**
-
-Optimized across devices.
-
-</td>
-
-</tr>
-</table>
-
-Additional practices include:
-
-* Centralized API client
-* Environment-based configuration
-* Form validation
-* Loading and empty states
-* Secure payment redirection
-* Separation of UI and API logic
-* Reusable components
-* Structured authentication handling
-
----
-
-# 📄 License
-
-This project is private and developed for the **FixOra home service marketplace**.
-
-© FixOra. All rights reserved.
+**© FixOra — All Rights Reserved**
 
 ---
 
 <div align="center">
 
-### 🔧 FixOra
+<a href="https://fixora-client.vercel.app">
+    <img src="https://i.ibb.co.com/CxnFkxc/fixora-logo-no-bg-removebg-preview.png" alt="FixOra Logo" width="270" />
+  </a>
 
 **Connecting Customers with Trusted Home Service Professionals**
 
-Built with ❤️ using Next.js & TypeScript
+Built with ❤️ using **Next.js & TypeScript**
 
 </div>
