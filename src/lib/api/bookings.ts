@@ -19,10 +19,15 @@ export const bookingsApi = {
     return data;
   },
 
+  // ✅ Send direct PATCH request to /bookings/:id
+  updateStatus: async (id: string, status: string) => {
+    const { data } = await apiClient.patch<ApiResponse<Booking>>(`/bookings/${id}`, {
+      status,
+    });
+    return data;
+  },
+
   cancel: async (id: string) => {
-    // Send an explicit (empty) JSON body — some backends reject a
-    // body-less PATCH outright, so this keeps the request consistent
-    // with every other mutation call in this client.
     const { data } = await apiClient.patch<ApiResponse<Booking>>(`/bookings/${id}/cancel`, {});
     return data;
   },

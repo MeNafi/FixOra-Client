@@ -40,28 +40,9 @@ function TechBookingDetail() {
  const handleAction = async (action: "accept" | "decline" | "start" | "complete") => {
     setActionLoading(true);
     try {
-      // Action অনুযায়ী UpperCase Enum মান নির্ধারণ
-      const actionMap: Record<string, string> = {
-        accept: "ACCEPT",
-        decline: "DECLINE",
-        start: "START",
-        complete: "COMPLETE",
-      };
+      await techniciansApi.updateBooking(params.id as string, action);
 
-      const statusMap: Record<string, string> = {
-        accept: "ACCEPTED",
-        decline: "DECLINED",
-        start: "IN_PROGRESS",
-        complete: "COMPLETED",
-      };
-
-      // ব্যাকএন্ডে action এবং status দুটো ফিল্ডই পাঠানো হচ্ছে যেন Validation ফেল না করে
-      await techniciansApi.updateBooking(params.id as string, {
-        action: actionMap[action],
-        status: statusMap[action],
-      } as any);
-
-      toast.success(`Booking ${action}ed successfully`);
+      toast.success("Booking status updated");
       load();
     } catch (err) {
       toast.error(getErrorMessage(err));
