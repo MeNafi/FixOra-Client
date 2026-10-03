@@ -1,6 +1,8 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
 import type { ApiResponse } from "@/types";
 
+
+// add the backend API URL to the .env file as NEXT_PUBLIC_API_URL=https://fixora-api-chi.vercel.app/api
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://fixora-api-chi.vercel.app/api";
 
 export const apiClient = axios.create({
