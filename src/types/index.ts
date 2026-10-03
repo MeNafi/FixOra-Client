@@ -207,3 +207,5 @@ export interface AvailabilityUpdate {
 export interface TechnicianBookingAction {
   action: "accept" | "decline" | "start" | "complete";
 }
+
+
