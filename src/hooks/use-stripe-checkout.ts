@@ -56,3 +56,4 @@ export function useStripeCheckout() {
 
   return { startCheckout, loading, lastSession };
 }
+
